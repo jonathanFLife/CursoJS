@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Documento</title>
+</head>
+<body>
+    <h1>Exercício 002</h1>
+    <p>Adicione os Quadrados</p>
+    <div id = "app">
+        <div class="box" onmouseover="mudarcor()"></div>
+
+        </div>
+    
+    <script>
+        var boxElement = document.querySelector('div.box');
+        
+        boxElement.innerHTML= ' Olá!'  
+        boxElement.style.color= 'red'
+        
+        boxElement.style.backgroundColor= `black`;
+        //
+        function mudarcor(){
+        getRandomColor()
+        boxElement.style.backgroundColor = `${newColor}`;
+        }
+        
+
+
+        function getRandomColor() {  
+            var letters = "0123456789ABCDEF";  
+            var color = "#";  for (var i = 0; i < 6; i++) 
+            {    color += letters[Math.floor(Math.random() * 16)];  }  
+        return color;}
+        var newColor = getRandomColor(); // #E943F0
+        //
+
+       
+
+        
+    </script>
+</body>
+</html>

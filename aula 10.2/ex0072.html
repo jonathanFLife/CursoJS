@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos DOM</title>
+
+    <Style>
+        body {
+            font: normal 18px Arial;
+        }
+        input {
+            font: normal 18px Arial;
+            width: 100px ;
+        }
+        div#res {
+            margin-top: 10px ;
+        }
+
+    </Style>
+</head>
+<body>
+    <h1>Testando meus conhecimentos</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="soma"  onclick="somar()"> <!--esqueci de por os () kkk-->
+    <div id="res">resultado</div>
+
+    <script>
+        function somar() {
+            var a   = window.document.getElementById('txtn1')
+            var b   = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            var a1  = Number(a.value)
+            var b2  = Number(b.value)
+            var s   = a1 + b2 
+            res.innerHTML = `A soma de ${a1} mais ${b2} é <strong> ${s} </strong>`
+        }
+
+    </script>
+</body>
+</html>
